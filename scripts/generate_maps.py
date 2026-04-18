@@ -1,6 +1,7 @@
 import mcschematic
+import os
 
-def generate_fireball_map():
+def generate_arena(name, teams, output_dir):
     schem = mcschematic.MCSchematic()
     
     # 1. Generate Center Island (8x8 stone/grass)
@@ -10,12 +11,7 @@ def generate_fireball_map():
                 schem.setBlock((x, y, z), "minecraft:stone")
             schem.setBlock((x, 0, z), "minecraft:grass_block")
 
-    # 2. Generate Team Islands (Red vs Blue - 1v1)
-    teams = [
-        {"name": "red", "color": "red_wool", "pos": (20, 0, 0)},
-        {"name": "blue", "color": "blue_wool", "pos": (-20, 0, 0)}
-    ]
-
+    # 2. Generate Team Islands
     for team in teams:
         tx, ty, tz = team["pos"]
         # Small 5x5 platform
@@ -28,13 +24,29 @@ def generate_fireball_map():
         schem.setBlock((tx, ty, tz - 1), "minecraft:red_bed[part=head,facing=north]")
 
     # 3. Save the schematic
+    schem.save(output_dir, name, mcschematic.Version.JE_1_21)
+    print(f"Schematic saved to {output_dir}/{name}.schem")
+
+def main():
     output_dir = "backend/plugins/FastAsyncWorldEdit/schematics"
-    import os
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    
-    schem.save(output_dir, "fireball_arena", mcschematic.Version.JE_1_21)
-    print(f"Schematic saved to {output_dir}/fireball_arena.schem")
+
+    # 1v1 Mode
+    teams_1v1 = [
+        {"name": "red", "color": "red_wool", "pos": (20, 0, 0)},
+        {"name": "blue", "color": "blue_wool", "pos": (-20, 0, 0)}
+    ]
+    generate_arena("fireball_1v1", teams_1v1, output_dir)
+
+    # 4-Player Mode
+    teams_4p = [
+        {"name": "red", "color": "red_wool", "pos": (20, 0, 0)},
+        {"name": "blue", "color": "blue_wool", "pos": (-20, 0, 0)},
+        {"name": "green", "color": "green_wool", "pos": (0, 0, 20)},
+        {"name": "yellow", "color": "yellow_wool", "pos": (0, 0, -20)}
+    ]
+    generate_arena("fireball_4p", teams_4p, output_dir)
 
 if __name__ == "__main__":
-    generate_fireball_map()
+    main()
