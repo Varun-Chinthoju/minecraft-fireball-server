@@ -10,12 +10,10 @@ def generate_fireball_map():
                 schem.setBlock((x, y, z), "minecraft:stone")
             schem.setBlock((x, 0, z), "minecraft:grass_block")
 
-    # 2. Generate Team Islands (Red, Blue, Green, Yellow)
+    # 2. Generate Team Islands (Red vs Blue - 1v1)
     teams = [
         {"name": "red", "color": "red_wool", "pos": (20, 0, 0)},
-        {"name": "blue", "color": "blue_wool", "pos": (-20, 0, 0)},
-        {"name": "green", "color": "green_wool", "pos": (0, 0, 20)},
-        {"name": "yellow", "color": "yellow_wool", "pos": (0, 0, -20)}
+        {"name": "blue", "color": "blue_wool", "pos": (-20, 0, 0)}
     ]
 
     for team in teams:
