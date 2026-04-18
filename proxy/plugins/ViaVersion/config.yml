@@ -22,3 +22,4 @@ bungee-ping-save: true
 # It will use the default option if none found.
 bungee-servers:
   default: 47
+  backend: 767

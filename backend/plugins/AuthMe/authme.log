@@ -1,0 +1,26 @@
+[04-18 22:57:15]: [INFO] Created column 'regdate' and set the current timestamp, 1776553035138, to all 0 rows
+[04-18 22:57:15]: [INFO] SQLite Setup finished
+[04-18 22:57:15]: [INFO] No supported permissions system found! Permissions are disabled!
+[04-18 22:57:15]: [WARN] WARNING! The protectInventory feature requires ProtocolLib! Disabling it...
+[04-18 22:57:15]: [WARN] Note: Hooks.bungeecord is set to false but your server appears to be running in bungeecord mode (see your spigot.yml). In order to allow the datasource caching and the AuthMeBungee add-on to work properly you have to enable this option!
+[04-18 22:57:15]: [INFO] AuthMe 5.6.0-beta2 build n.2453 successfully enabled!
+[04-18 22:57:15]: [INFO] Downloading GEO IP database, because the old database is older than 30 days or doesn't exist
+[04-18 22:57:15]: [WARN] No MaxMind credentials found in the configuration file! GeoIp protections will be disabled.
+[04-18 22:57:15]: [INFO] There is no newer GEO IP database uploaded to MaxMind. Using the old one for now.
+[04-18 22:57:15]: [WARN] Could not download GeoLiteAPI database [FileNotFoundException]: plugins/AuthMe/GeoLite2-Country.mmdb (No such file or directory)
+[04-18 22:57:15]: java.io.FileNotFoundException: plugins/AuthMe/GeoLite2-Country.mmdb (No such file or directory)
+	at java.base/java.io.RandomAccessFile.open0(Native Method)
+	at java.base/java.io.RandomAccessFile.open(Unknown Source)
+	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+	at AuthMe.jar//fr.xephi.authme.libs.com.maxmind.db.BufferHolder.<init>(BufferHolder.java:20)
+	at AuthMe.jar//fr.xephi.authme.libs.com.maxmind.db.Reader.<init>(Reader.java:121)
+	at AuthMe.jar//fr.xephi.authme.service.GeoIpService.startReading(GeoIpService.java:173)
+	at AuthMe.jar//fr.xephi.authme.service.GeoIpService.updateDatabase(GeoIpService.java:144)
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86)
+	at org.bukkit.craftbukkit.scheduler.CraftAsyncTask.run(CraftAsyncTask.java:57)
+	at com.destroystokyo.paper.ServerSchedulerReportingWrapper.run(ServerSchedulerReportingWrapper.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
