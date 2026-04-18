@@ -4,24 +4,28 @@ online_mode: false
 remote_ping_cache: -1
 forge_support: true
 max_packets_per_second: 4096
-ip_forward: true
+max_packets_data_per_second: 33554432
 disabled_commands:
 - disabledcommandhere
-max_packets_data_per_second: 33554432
+log_pings: true
 reject_transfers: false
 player_limit: -1
-connection_throttle: 4000
 connection_throttle_limit: 3
+connection_throttle: 4000
 prevent_proxy_connections: false
 log_commands: false
-log_pings: true
 stats: 8b7560ce-2930-4681-b0da-da93502649bf
 groups:
   md_5:
   - admin
+ip_forward: true
 servers:
-  backend:
-    motd: '&1Fireball Fight Backend'
+  lobby:
+    motd: '&bLobby &7- &aJoin the Games!'
+    address: mc-lobby:25565
+    restricted: false
+  fireball:
+    motd: '&cFireball Fight Minigame'
     address: mc-backend:25565
     restricted: false
 permissions:
@@ -36,7 +40,7 @@ permissions:
   - bungeecord.command.kick
 listeners:
 - query_port: 25577
-  motd: '&bFireball Fight &7- &aJava &7| &eBedrock &7| &dWeb'
+  motd: '&bMinigame Network &7- &aJava &7| &eBedrock &7| &dWeb'
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
@@ -44,10 +48,10 @@ listeners:
     pvp.md-5.net: pvp
   ping_passthrough: false
   priorities:
-  - backend
+  - lobby
   bind_local_address: true
   host: 0.0.0.0:25565
-  max_players: 100
+  max_players: 200
   tab_size: 60
   force_default_server: true
 enforce_secure_profile: false

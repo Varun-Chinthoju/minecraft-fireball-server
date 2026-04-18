@@ -15,6 +15,21 @@ services:
     networks:
       - mc-network
 
+  lobby:
+    image: itzg/minecraft-server
+    container_name: mc-lobby
+    environment:
+      EULA: "TRUE"
+      TYPE: PAPER
+      VERSION: "1.21"
+      ONLINE_MODE: "false"
+      MEMORY: "1G"
+    volumes:
+      - ./lobby:/data
+    restart: unless-stopped
+    networks:
+      - mc-network
+
   backend:
     image: itzg/minecraft-server
     container_name: mc-backend
