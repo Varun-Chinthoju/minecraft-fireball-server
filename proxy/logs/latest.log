@@ -1,0 +1,89 @@
+[22:52:55] [main/INFO]: Using mbed TLS based native cipher.
+[22:52:55] [main/INFO]: Using zlib based native compressor.
+[22:52:55] [main/INFO]: Enabled Waterfall version git:Waterfall-Bootstrap:26.1-R0.1-SNAPSHOT:66a9cfd:609
+[22:52:55] [main/WARN]: Waterfall has reached end of life and is no longer maintained. We recommend you transition to Velocity (https://papermc.io/software/velocity). For more information, see the announcement (https://forums.papermc.io/threads/1088/).
+[22:52:55] [main/INFO]: Not on Windows, attempting to use enhanced EpollEventLoop
+[22:52:55] [main/INFO]: Epoll is working, utilising it!
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=cmd_alert, file=modules/cmd_alert.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=cmd_find, file=modules/cmd_find.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=cmd_list, file=modules/cmd_list.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=cmd_send, file=modules/cmd_send.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=cmd_server, file=modules/cmd_server.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Discovered module: ModuleSpec(name=reconnect_yaml, file=modules/reconnect_yaml.jar, provider=JenkinsModuleSource())
+[22:52:55] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:55] [main/INFO]: Attempting to Jenkins download module cmd_alert v609
+[22:52:56] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/cmd_alert-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:56] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:56] [main/INFO]: Attempting to Jenkins download module cmd_find v609
+[22:52:56] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/cmd_find-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:56] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:56] [main/INFO]: Attempting to Jenkins download module cmd_list v609
+[22:52:57] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/cmd_list-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:57] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:57] [main/INFO]: Attempting to Jenkins download module cmd_send v609
+[22:52:57] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/cmd_send-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:57] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:57] [main/INFO]: Attempting to Jenkins download module cmd_server v609
+[22:52:57] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/cmd_server-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:57] [main/INFO]: Attempting to update plugin from null to ModuleVersion(build=609, git=66a9cfd)
+[22:52:57] [main/INFO]: Attempting to Jenkins download module reconnect_yaml v609
+[22:52:58] [main/WARN]: Failed to download: FileNotFoundException : https://api.papermc.io/v2/projects/waterfall/versions/26.1/builds/609/downloads/reconnect_yaml-26.1-609.jar @ sun.net.www.protocol.http.HttpURLConnection:-1
+[22:52:58] [main/INFO] [Geyser-BungeeCord]: Loading extensions...
+[22:52:58] [main/INFO] [Geyser-BungeeCord]: Loaded 0 extension(s)
+[22:52:58] [main/INFO]: Loaded plugin Geyser-BungeeCord version 2.9.5-SNAPSHOT by GeyserMC
+[22:52:58] [main/INFO] [EaglercraftXServer]: Loading EaglercraftXServer 1.0.8...
+[22:52:58] [main/INFO] [EaglercraftXServer]: (Platform: BungeeCord)
+[22:52:59] [main/INFO] [EaglercraftXServer]: Server Name: "Fireball Fight"
+[22:52:59] [main/ERROR] [EaglercraftXServer]: Could not load server icon: server-icon.png
+javax.imageio.IIOException: Can't read input file!
+	at java.desktop/javax.imageio.ImageIO.read(Unknown Source)
+	at net.lax1dude.eaglercraft.backend.server.base.ServerIconLoader.loadServerIcon(ServerIconLoader.java:112)
+	at net.lax1dude.eaglercraft.backend.server.base.ServerIconLoader$1.loadServerIcon(ServerIconLoader.java:51)
+	at net.lax1dude.eaglercraft.backend.server.base.EaglerListener.<init>(EaglerListener.java:90)
+	at net.lax1dude.eaglercraft.backend.server.base.EaglerListener.<init>(EaglerListener.java:58)
+	at net.lax1dude.eaglercraft.backend.server.base.EaglerXServer.loadProxying(EaglerXServer.java:355)
+	at net.lax1dude.eaglercraft.backend.server.base.EaglerXServer.load(EaglerXServer.java:339)
+	at net.lax1dude.eaglercraft.backend.server.bungee.PlatformPluginBungee.onLoad(PlatformPluginBungee.java:229)
+	at net.md_5.bungee.api.plugin.PluginManager.enablePlugin(PluginManager.java:417)
+	at net.md_5.bungee.api.plugin.PluginManager.enablePlugin(PluginManager.java:386)
+	at net.md_5.bungee.api.plugin.PluginManager.loadPlugins(PluginManager.java:319)
+	at net.md_5.bungee.BungeeCord.start(BungeeCord.java:293)
+	at net.md_5.bungee.BungeeCordLauncher.main(BungeeCordLauncher.java:70)
+	at net.md_5.bungee.Bootstrap.main(Bootstrap.java:15)
+[22:52:59] [main/INFO]: Loaded plugin EaglercraftXServer version 1.0.8 by lax1dude
+[22:52:59] [main/INFO]: Loaded plugin EaglerMOTD-Reborn version 1.0.0 by lax1dude
+[22:52:59] [main/INFO] [ViaVersion]: Found ViaBackwards, loading it
+[22:52:59] [main/INFO] [ViaVersion]: Found ViaRewind, loading it
+[22:52:59] [main/INFO]: Loaded plugin ViaVersion version 0.3.1 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[22:52:59] [main/INFO] [floodgate]: Took 313ms to boot Floodgate
+[22:52:59] [main/INFO]: Loaded plugin floodgate version 2.2.5-SNAPSHOT (b132-5a72b6a) by GeyserMC
+[22:52:59] [main/WARN]: Forced host server pvp is not defined
+[22:52:59] [main/INFO]: Enabled plugin Geyser-BungeeCord version 2.9.5-SNAPSHOT by GeyserMC
+[22:52:59] [main/INFO] [EaglercraftXServer]: Enabling EaglercraftXServer 1.0.8...
+[22:52:59] [main/INFO] [EaglercraftXServer]: Connecting to skin cache database "jdbc:sqlite:eagler_skins_cache.db"...
+[22:52:59] [main/INFO] [EaglercraftXServer]: Connected to skin cache database successfully!
+[22:52:59] [main/INFO]: Enabled plugin EaglercraftXServer version 1.0.8 by lax1dude
+[22:52:59] [main/INFO] [EaglerMOTD-Reborn]: Loaded 1 messages for listener0
+[22:52:59] [main/INFO] [EaglerMOTD-Reborn]: Loaded 6 query types
+[22:52:59] [main/INFO]: Enabled plugin EaglerMOTD-Reborn version 1.0.0 by lax1dude
+[22:53:00] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: ******************************************
+[22:53:00] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: 
+[22:53:00] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: Loading Geyser version 2.9.5-b1117 (git-master-c386571)
+[22:53:00] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: 
+[22:53:00] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: ******************************************
+[22:53:00] [Netty Worker IO Thread #0/INFO] [EaglercraftXServer]: You are running the latest version of EaglerXServer
+[22:53:00] [Via-Mappingloader-1/INFO] [ViaVersion]: Loading block connection mappings ...
+[22:53:00] [Via-Mappingloader-1/INFO] [ViaVersion]: Using FastUtil Long2ObjectOpenHashMap for block connections
+[22:53:00] [main/INFO] [ViaVersion]: Successfully injected ViaVersion into BungeeCord!
+[22:53:00] [main/INFO] [ViaVersion]: Loading translations...
+[22:53:00] [main/INFO] [ViaVersion]: Registering protocols...
+[22:53:00] [main/INFO] [ViaVersion]: Registering protocols...
+[22:53:00] [main/INFO] [ViaVersion]: ViaVersion detected lowest supported version by the proxy: 1.8.x (47)
+[22:53:00] [main/INFO] [ViaVersion]: Highest supported version by the proxy: 26.1 (775)
+[22:53:00] [ViaVersion Pool Thread #4/INFO] [ViaVersion]: Finished mapping loading, shutting down loader executor.
+[22:53:00] [main/INFO]: Enabled plugin ViaVersion version 0.3.1 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[22:53:00] [main/INFO]: Enabled plugin floodgate version 2.2.5-SNAPSHOT (b132-5a72b6a) by GeyserMC
+[22:53:00] [Netty Boss IO Thread #0/INFO] [EaglercraftXServer]: Listener "listener0" injected into channel [id: 0x8713b7f8, L:/[0:0:0:0:0:0:0:0]:25565] successfully (Generic Netty method)
+[22:53:00] [Netty Boss IO Thread #0/INFO]: Listening on /0.0.0.0:25565
+[22:53:01] [GeyserServer-3-1/INFO] [Geyser-BungeeCord]: Started Geyser on UDP port 19132
+[22:53:01] [Geyser-BungeeCord Pool Thread #0/INFO] [Geyser-BungeeCord]: Done (1.399s)! Run /geyser help for help!

@@ -1,0 +1,35 @@
+services:
+  proxy:
+    image: itzg/bungeecord
+    container_name: mc-proxy
+    ports:
+      - "25565:25565" # Java Edition
+      - "19132:19132/udp" # Bedrock Edition
+      - "8081:8081" # Eaglercraft WebSockets
+    environment:
+      TYPE: WATERFALL
+      ONLINE_MODE: "false"
+    volumes:
+      - ./proxy:/server
+    restart: unless-stopped
+    networks:
+      - mc-network
+
+  backend:
+    image: itzg/minecraft-server
+    container_name: mc-backend
+    environment:
+      EULA: "TRUE"
+      TYPE: PAPER
+      VERSION: "1.21"
+      ONLINE_MODE: "false"
+      MEMORY: "2G"
+    volumes:
+      - ./backend:/data
+    restart: unless-stopped
+    networks:
+      - mc-network
+
+networks:
+  mc-network:
+    driver: bridge
