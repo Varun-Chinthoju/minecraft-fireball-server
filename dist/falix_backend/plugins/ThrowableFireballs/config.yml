@@ -1,0 +1,101 @@
+# -------------------------------------------------------------------
+# ==================================================================#
+#                                                                   #
+#                  Plugin by FlailoftheLord.                        #
+#         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-                   #
+#    ______               __        _____                           #
+#    |       |           /  \         |        |                   #
+#    |__     |          /____\        |        |                   #
+#    |       |         /      \       |        |                   #
+#    |       |_____   /        \    __|__      |______             #
+#                                                                   #
+# ==================================================================#
+# -------------------------------------------------------------------
+
+#  Wether the fireball does a natural, Ghast-Initiated explosion.
+#  NOTE: this will not cause as much knockback and may not cancel block damage.
+#  if set to true the below values will be ignored.
+#  if set to false, the plugin will use the below explosion settings 
+#  for creating the explosion manually.
+NaturalExplosion: false
+# Sets the Explosion power of fireballs on impact.
+FireballExplosionPower: 3
+# Blocks that are immune to explosions caused by custom fireballs.
+ImmuneBlocks:
+- chest
+- trapped_chest
+# Keywords for Immune blocks, all material types containing these words will be whitelisted.
+ImmuneBlockKeywords:
+- stone
+# Damage dealt to entities in explosion radius
+FireballDamage: 1.0
+# Whether the explosion sets blocks on fire
+FireballSetFire: false
+# Enables/Disables throwing fireballs from the offhand slot
+AllowOffhandThrowing: true
+# Use vanilla Fire Charges?
+UseFirecharge: true
+# Soft-limit height that entities are thrown when caught in an explosion
+MaxJumpHeight: 12
+# Fireball throwing is enabled/disabled (true/false) in the following gamemodes
+Gamemodes:
+  Adventure: true
+  Creative: true
+  Spectator: false
+  Survival: true
+# Worlds in which fireballs cannot be used.
+NoThrowZones:
+- world_the_end
+- example_world
+# Message sent when using in a NoThrowZone.
+NoThrowZoneMessage: '%prefix% &cYou''re not allowed to throw fireballs in this world!'
+# Plugin messaging prefix for customization.
+Prefix: '&8(&6Fireballs&8)'
+# Sent when reloading the plugin via command.
+ReloadMessage: '%prefix% &aconfig file successfully reloaded, &amake sure to restart
+  the server if changing the fireball recipe!'
+# Sent when command sender doesn't have permission to execute a command.
+NoPermissionMessage: '%prefix% &cYou do not have permission to use this'
+# Sent when the player trying to craft the item may not.
+NoCraftPermission: '%prefix% &cYou don''t have permission to craft this.'
+# If Enabled, notifies the player when the fireball they're trying to throw is on cooldown.
+CooldownMessageEnabled: true
+# Cooldown Message this message is sent to player when above verbose: is set to true
+#  use the placeholder %cooldown% for the cooldown time in seconds
+CooldownMessage: '%prefix% &cYou must wait %cooldown% seconds before throwing this'
+# Cooldown (in seconds) between throws; set to 0 to disable.
+Cooldown: 1
+# Display item used for the custom fireball recipe.
+FireballItem: FIRE_CHARGE
+# Name of the custom fireball.
+FireballName: '&6Fireball'
+# Set as many lines as you'd like :)
+Lore:
+- '&7right click to throw'
+- '&7grief extreme ;)'
+#  - - -
+#  Heres the crafting recipe for the Fireballs!
+#  Set the AmountGiven to any number to set the amount of the item given when you craft it.
+#  Each line in the Pattern section is one row in the crafting table (3 x 3)
+#  Change the Letters to anything between 'A' and 'I' then define which material type each
+#  letter represents in the Materials section below
+#  You can get a full list of Item names here:
+#     https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+#  - - -
+#  The plugin will give you a warning in the console if one of the items is invalid.
+CraftingRecipe:
+  AmountGiven: 3
+  Pattern:
+    '1': ABA
+    '2': BCB
+    '3': ABA
+  Materials:
+    A: GUNPOWDER
+    B: FIREWORK_STAR
+    C: GHAST_TEAR
+    D: ' '
+    E: ' '
+    F: ' '
+    G: ' '
+    H: ' '
+    I: ' '
