@@ -17,19 +17,16 @@ cp -r proxy/plugins "$PROXY_DIST/"
 cp proxy/config.yml "$PROXY_DIST/"
 cp proxy/waterfall.yml "$PROXY_DIST/"
 cp proxy/modules.yml "$PROXY_DIST/"
-# Remove corrupted/temp files if any
-rm -f "$PROXY_DIST/plugins/EaglercraftXBungee-Latest.jar"
+cp proxy/waterfall-*.jar "$PROXY_DIST/server.jar"
 
-# 2. Package Backend (Lobby & Minigames combined or separate?)
-# On Falix free, usually you have 2 servers. 
-# Let's assume Backend hosts both Lobby and Fireball for now to save a server, 
-# or the user can split them.
+# 2. Package Backend
 echo "Collecting Backend files..."
 cp -r backend/plugins "$BACKEND_DIST/"
 cp -r backend/config "$BACKEND_DIST/"
 cp backend/server.properties "$BACKEND_DIST/"
 cp backend/spigot.yml "$BACKEND_DIST/"
 cp backend/bukkit.yml "$BACKEND_DIST/"
+cp backend/paper-*.jar "$BACKEND_DIST/server.jar"
 # Include the generated maps
 mkdir -p "$BACKEND_DIST/plugins/FastAsyncWorldEdit/schematics"
 cp backend/plugins/FastAsyncWorldEdit/schematics/*.schem "$BACKEND_DIST/plugins/FastAsyncWorldEdit/schematics/"
