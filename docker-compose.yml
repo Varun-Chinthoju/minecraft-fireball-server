@@ -12,6 +12,10 @@ services:
     volumes:
       - ./proxy:/server
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
     networks:
       - mc-network
 
@@ -27,6 +31,10 @@ services:
     volumes:
       - ./lobby:/data
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
     networks:
       - mc-network
 
@@ -42,6 +50,10 @@ services:
     volumes:
       - ./fireball:/data
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
     networks:
       - mc-network
 
@@ -57,6 +69,10 @@ services:
     volumes:
       - ./survival:/data
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
     networks:
       - mc-network
 
@@ -67,6 +83,10 @@ services:
     environment:
       SECRET_KEY: "0013a3826dc4e984acb46c118a4792f606e3f4def4444edbed5a6d657470c347"
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
 
 networks:
   mc-network:
