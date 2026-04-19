@@ -21,12 +21,16 @@ groups:
 ip_forward: true
 servers:
   lobby:
-    motd: '&bLobby &7- &aJoin the Games!'
+    motd: '&b&lLUMINA &7- &aHub'
     address: mc-lobby:25565
     restricted: false
   fireball:
-    motd: '&cFireball Fight Minigame'
-    address: mc-backend:25565
+    motd: '&c&lFIREBALL &7- &fMinigame'
+    address: mc-fireball:25565
+    restricted: false
+  survival:
+    motd: '&a&lSURVIVAL &7- &fSMP'
+    address: mc-survival:25565
     restricted: false
 permissions:
   default:

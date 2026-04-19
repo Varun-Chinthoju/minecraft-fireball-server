@@ -30,9 +30,9 @@ services:
     networks:
       - mc-network
 
-  backend:
+  fireball:
     image: itzg/minecraft-server
-    container_name: mc-backend
+    container_name: mc-fireball
     environment:
       EULA: "TRUE"
       TYPE: PAPER
@@ -40,10 +40,33 @@ services:
       ONLINE_MODE: "false"
       MEMORY: "2G"
     volumes:
-      - ./backend:/data
+      - ./fireball:/data
     restart: unless-stopped
     networks:
       - mc-network
+
+  survival:
+    image: itzg/minecraft-server
+    container_name: mc-survival
+    environment:
+      EULA: "TRUE"
+      TYPE: PAPER
+      VERSION: "1.21"
+      ONLINE_MODE: "false"
+      MEMORY: "2G"
+    volumes:
+      - ./survival:/data
+    restart: unless-stopped
+    networks:
+      - mc-network
+
+  playit:
+    image: ghcr.io/playit-cloud/playit-agent:0.17
+    container_name: playit-agent
+    network_mode: host
+    environment:
+      SECRET_KEY: "0013a3826dc4e984acb46c118a4792f606e3f4def4444edbed5a6d657470c347"
+    restart: unless-stopped
 
 networks:
   mc-network:
